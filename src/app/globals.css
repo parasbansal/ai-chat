@@ -30,4 +30,37 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+  .flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .flex-col-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #292929 #0d0d0d;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #0d0d0d;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #292929;
+    border-radius: 30px;
+    border: 12px none #000000;
+  }
 }
