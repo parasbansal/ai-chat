@@ -30,17 +30,6 @@ body {
   .text-balance {
     text-wrap: balance;
   }
-  .flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .flex-col-center {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
 
   /* ===== Scrollbar CSS ===== */
   /* Firefox */

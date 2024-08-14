@@ -17,16 +17,16 @@ export default function Chat() {
       >
         <div className="min-h-full flex-1 flex flex-col justify-end gap-2 w-full pb-4">
           {messages.length ? (
-            messages.map((m) => {
+            messages.map((m, i) => {
               return m.role === "user" ? (
-                <div className="w-full flex flex-col gap-2 items-end">
+                <div key={i} className="w-full flex flex-col gap-2 items-end">
                   <span className="px-2">You</span>
                   <div className="flex flex-col items-center px-4 py-2 max-w-[90%] bg-orange-700/50 rounded-lg text-neutral-200 whitespace-pre-wrap">
                     <Markdown>{m.content}</Markdown>
                   </div>
                 </div>
               ) : (
-                <div className="w-full flex flex-col gap-2 items-start">
+                <div key={i} className="w-full flex flex-col gap-2 items-start">
                   <span className="px-2">AI</span>
                   <div className="flex flex-col max-w-[90%] px-4 py-2 bg-indigo-700/50 rounded-lg text-neutral-200 whitespace-pre-wrap">
                     <Markdown>{m.content}</Markdown>
@@ -35,7 +35,7 @@ export default function Chat() {
               );
             })
           ) : (
-            <div className="text-center flex-1 flex-center text-neutral-500 text-4xl">
+            <div className="text-center flex-1 flex items-center justify-center text-neutral-500 text-4xl">
               <h1>Local AI Chat</h1>
             </div>
           )}
